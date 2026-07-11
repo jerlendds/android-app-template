@@ -1,4 +1,4 @@
-package com.jerlendds.gitmob
+package com.jerlendds.moblab
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,41 +7,29 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.jerlendds.gitmob.ui.theme.GitMobTheme
+import com.jerlendds.moblab.presentation.home.HomeScreen
+import com.jerlendds.moblab.ui.theme.MobLabTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            GitMobTheme {
+            val appContainer = (application as MobLabApplication).appContainer
+            val presenter = remember { appContainer.createHomePresenter() }
+
+            MobLabTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                    HomeScreen(
+                        presenter = presenter,
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .padding(innerPadding),
                     )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    GitMobTheme {
-        Greeting("Android")
     }
 }

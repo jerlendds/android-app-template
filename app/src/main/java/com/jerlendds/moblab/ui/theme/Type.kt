@@ -1,4 +1,4 @@
-package com.jerlendds.gitmob.ui.theme
+package com.jerlendds.moblab.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -8,6 +8,17 @@ lifecycleRuntimeKtx = "2.11.0"
 activityCompose = "1.13.0"
 kotlin = "2.2.10"
 composeBom = "2026.02.01"
+retrofit = "3.0.0"
+okhttp = "5.3.0"
+room = "2.8.4"
+rxJava = "3.1.12"
+rxRelay = "3.0.1"
+rxAndroid = "3.0.2"
+stetho = "1.6.0"
+leakCanary = "2.14"
+timber = "5.0.1"
+mixpanel = "8.1.0"
+ksp = "2.2.10-2.0.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -24,8 +35,27 @@ androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "u
 androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit" }
+moshi = { group = "com.squareup.moshi", name = "moshi", version = "1.15.2" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+androidx-room-rxjava3 = { group = "androidx.room", name = "room-rxjava3", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+rxjava = { group = "io.reactivex.rxjava3", name = "rxjava", version.ref = "rxJava" }
+rxandroid = { group = "io.reactivex.rxjava3", name = "rxandroid", version.ref = "rxAndroid" }
+rxrelay = { group = "com.jakewharton.rxrelay3", name = "rxrelay", version.ref = "rxRelay" }
+stetho = { group = "com.facebook.stetho", name = "stetho", version.ref = "stetho" }
+stetho-okhttp3 = { group = "com.facebook.stetho", name = "stetho-okhttp3", version.ref = "stetho" }
+leakcanary-android = { group = "com.squareup.leakcanary", name = "leakcanary-android", version.ref = "leakCanary" }
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+mixpanel-android = { group = "com.mixpanel.android", name = "mixpanel-android", version.ref = "mixpanel" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

@@ -22,5 +22,8 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "GitMob"
+rootProject.name = "MobLab"
 include(":app")
+include(":data")
+include(":domain")
+include(":presentation")

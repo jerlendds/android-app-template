@@ -1,4 +1,4 @@
-package com.jerlendds.gitmob
+package com.jerlendds.moblab
 
 import org.junit.Test
 

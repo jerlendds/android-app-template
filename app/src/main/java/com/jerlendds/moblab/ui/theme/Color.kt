@@ -1,4 +1,4 @@
-package com.jerlendds.gitmob.ui.theme
+package com.jerlendds.moblab.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
